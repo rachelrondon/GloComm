@@ -1,3 +1,4 @@
+
 import React, {Component} from 'react';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
@@ -37,12 +38,16 @@ export default class SelectFieldComponent extends Component{
 
   render() {
     const {values} = this.state;
+
     return(
       <SelectField
-        multiple={true}
+        multiple={false}
         hintText="Select a name"
         value={values}
         onChange={this.handleChange}
+        onChange={function(make) {
+          alert(`'You chose + ${this.state}'`)
+        }}
       >
         {this.menuItems(values)}
       </SelectField>
