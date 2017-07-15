@@ -100,7 +100,7 @@ class SelectFieldComponent extends Component{
         <Dialog
           actions={actions}
           modal={true}
-          title={`You choose ${values}!`}
+          title={`${values}!`}
           open={this.state.open}
           onRequestClose={this.handleClose}
           >
