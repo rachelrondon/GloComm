@@ -1,11 +1,8 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import SelectFieldComponent from './SelectFieldComponent';
-import MenuItem from 'material-ui/MenuItem';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-import logo from './logo.svg';
 import './App.css';
 
 injectTapEventPlugin();
