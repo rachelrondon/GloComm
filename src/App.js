@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import MyAwesomeReactComponent from './MyAwesomeReactComponent';
 import SelectFieldComponent from './SelectFieldComponent';
 import MenuItem from 'material-ui/MenuItem';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -14,7 +13,6 @@ injectTapEventPlugin();
 const App = () => (
   <MuiThemeProvider>
     <div>
-      <MyAwesomeReactComponent />
       <SelectFieldComponent />
     </div>
   </MuiThemeProvider>
