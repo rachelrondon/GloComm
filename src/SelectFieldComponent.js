@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
 const names = [
   'Rachel',
@@ -14,8 +15,8 @@ const styles = {
   },
 };
 
-
 export default class SelectFieldComponent extends Component{
+
   state = {
     values: [],
   };

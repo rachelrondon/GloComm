@@ -4,9 +4,12 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import MyAwesomeReactComponent from './MyAwesomeReactComponent';
 import SelectFieldComponent from './SelectFieldComponent';
 import MenuItem from 'material-ui/MenuItem';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import logo from './logo.svg';
 import './App.css';
+
+injectTapEventPlugin();
 
 const App = () => (
   <MuiThemeProvider>
