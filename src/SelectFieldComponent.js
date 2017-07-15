@@ -1,3 +1,4 @@
+
 import React, {Component} from 'react';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
@@ -9,10 +10,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 // Here I am defining the array of cities  that will be used
 const cities  = [
   'New York',
-  'London',
   'Paris',
-  'Rome',
-  'Madrid',
   'Monaco',
   'Los Angeles'
 ]
