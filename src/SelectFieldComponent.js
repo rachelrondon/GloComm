@@ -13,15 +13,28 @@ const names = [
   'Rebecca'
 ]
 
-export default class SelectFieldComponent extends Component{
 
-// Here I am defining the state. The values of these elements will be changed
+class SelectFieldComponent extends Component{
+
   state = {
-      // the values are an array
     values: [],
-    // the state for open starts as flase
     open: false,
   };
+
+
+  componentDidMount() {
+    fetch(names, {
+      method:'GET'
+    })
+    .then((results) => {
+      results.json().then((names_data) => {
+        this.setState({names: names_data});
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  }
 
   // here the handle open function is defined
   handleOpen = () => {
@@ -52,9 +65,6 @@ export default class SelectFieldComponent extends Component{
           value={name}
           primaryText={name}
           onClick={this.handleOpen}
-          // onClick={function(make) {
-          //   alert(`You chose ${values}`)
-          // }}
         />
         )
       );
@@ -99,3 +109,5 @@ export default class SelectFieldComponent extends Component{
         );
       }
     }
+
+  export default SelectFieldComponent;
