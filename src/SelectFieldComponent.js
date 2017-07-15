@@ -38,15 +38,14 @@ export default class SelectFieldComponent extends Component{
 
   render() {
     const {values} = this.state;
-
     return(
       <SelectField
         multiple={false}
         hintText="Select a name"
         value={values}
         onChange={this.handleChange}
-        onChange={function(make) {
-          alert(`'You chose + ${this.state}'`)
+        onClick={function(make) {
+          alert(` You chose ${values}`)
         }}
       >
         {this.menuItems(values)}
