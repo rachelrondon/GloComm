@@ -29,9 +29,13 @@ export default class SelectFieldComponent extends Component{
       <MenuItem
         key={name}
         insetChildren={true}
+        label={this.prop}
         checked={values && values.indexOf(name) > -1}
         value={name}
         primaryText={name}
+        onClick={function(make) {
+          alert(` You chose ${values}`)
+        }}
       />
     ));
   }
@@ -44,9 +48,6 @@ export default class SelectFieldComponent extends Component{
         hintText="Select a name"
         value={values}
         onChange={this.handleChange}
-        onClick={function(make) {
-          alert(` You chose ${values}`)
-        }}
       >
         {this.menuItems(values)}
       </SelectField>
