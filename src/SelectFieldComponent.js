@@ -6,11 +6,15 @@ import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-// Here I am defining the array of names that will be used
-const names = [
-  'Rachel',
-  'Sarah',
-  'Rebecca'
+// Here I am defining the array of cities  that will be used
+const cities  = [
+  'New York',
+  'London',
+  'Paris',
+  'Rome',
+  'Madrid',
+  'Monaco',
+  'Los Angeles'
 ]
 
 
@@ -23,17 +27,17 @@ class SelectFieldComponent extends Component{
 
 
   componentDidMount() {
-    fetch(names, {
+    fetch(cities , {
       method:'GET'
     })
     .then((results) => {
-      results.json().then((names_data) => {
-        this.setState({names: names_data});
+      results.json().then((cities_data) => {
+        this.setState({cities : cities_data});
       });
     })
     .catch((err) => {
-      console.log(err);
-    });
+      console.log(err)
+    })
   }
 
   // here the handle open function is defined
@@ -52,18 +56,18 @@ class SelectFieldComponent extends Component{
   handleChange = (event, index, values) => this.setState({values});
 
 
-  // here the menuItems for the SelectField are passed the names
+  // here the menuItems for the SelectField are passed the cities
 
   menuItems(values) {
   // the map function creates a new array with the results of calling a function on every element in the array
-    return names.map((name) => (
+    return cities .map((city) => (
         <MenuItem
-          key={name}
+          key={city}
           insetChildren={true}
           label={this.prop}
-          checked={values && values.indexOf(name) > -1}
-          value={name}
-          primaryText={name}
+          checked={values && values.indexOf(city) > -1}
+          value={city}
+          primaryText={city}
           onClick={this.handleOpen}
         />
         )
@@ -87,7 +91,7 @@ class SelectFieldComponent extends Component{
 
         <SelectField
           multiple={false}
-          hintText="Select a name"
+          hintText="Select a city"
           value={values}
           onChange={this.handleChange}
         >
@@ -98,7 +102,7 @@ class SelectFieldComponent extends Component{
         <Dialog
           actions={actions}
           modal={true}
-          title={`You chose ${values}`}
+          title={`You choose ${values}!`}
           open={this.state.open}
           onRequestClose={this.handleClose}
           >
