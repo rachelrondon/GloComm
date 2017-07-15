@@ -44,17 +44,18 @@ export default class SelectFieldComponent extends Component{
   menuItems(values) {
   // the map function creates a new array with the results of calling a function on every element in the array
     return names.map((name) => (
-      <div>
         <MenuItem
           key={name}
           insetChildren={true}
           label={this.prop}
           checked={values && values.indexOf(name) > -1}
-          value={this.state.values}
+          value={name}
           primaryText={name}
           onClick={this.handleOpen}
+          // onClick={function(make) {
+          //   alert(`You chose ${values}`)
+          // }}
         />
-        </div>
         )
       );
     }
@@ -87,7 +88,7 @@ export default class SelectFieldComponent extends Component{
         <Dialog
           actions={actions}
           modal={true}
-          title={`You chose ${this.state}`}
+          title={`You chose ${values}`}
           open={this.state.open}
           onRequestClose={this.handleClose}
           >
