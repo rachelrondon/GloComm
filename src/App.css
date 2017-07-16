@@ -25,7 +25,9 @@
   margin-top: 50px;
 }
 
-
+#footer-msg {
+  padding-top: 20px;
+}
 nav {
   display: flex;
   width: 100%;
@@ -33,14 +35,25 @@ nav {
   height: 80px;
 }
 
+footer {
+  background-color:#00BCD4;
+  margin: 0;
+  padding: 0;
+  color:#ffffff;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+
 .nav-title {
   display: flex;
   font-size: 12px;
   margin-top: 12px;
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
-#greeting-message {
+#logo {
   font-size: 20px;
   color:#ffffff;
 }

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import SelectFieldComponent from './SelectFieldComponent';
 import Navigation from './Navigation';
+import Footer from './Footer';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import './App.css';
@@ -39,6 +40,15 @@ class App extends Component{
             <SelectFieldComponent />
           </div>
         </div>
+        <div className="col-select">
+          <div className="select-field-component">
+            <SelectFieldComponent />
+          </div>
+          <div className="select-field-component">
+            <SelectFieldComponent />
+          </div>
+        </div>
+        <Footer />
       </div>
     </MuiThemeProvider>
     )

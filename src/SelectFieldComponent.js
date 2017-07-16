@@ -9,11 +9,10 @@ import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'mat
 import TimePicker from 'material-ui/TimePicker';
 import './App.css';
 
-// Here I am defining the array of tasks  that will be used
 const tasks  = [
-  'Meeting',
-  'Phone Call',
-  'Lunch',
+  'meeting',
+  'phone call',
+  'coffee break',
 ]
 
 
@@ -115,7 +114,7 @@ class SelectFieldComponent extends Component{
             <Dialog
               actions={actions}
               modal={true}
-              title={`${values}!`}
+              title={`Your ${values} has been added!`}
               open={this.state.open}
               onRequestClose={this.handleClose}
               >
