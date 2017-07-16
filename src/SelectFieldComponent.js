@@ -1,4 +1,3 @@
-
 import React, {Component} from 'react';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
@@ -6,13 +5,14 @@ import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import TimePicker from 'material-ui/TimePicker';
 
-// Here I am defining the array of cities  that will be used
-const cities  = [
-  'New York',
-  'Paris',
-  'Monaco',
-  'Los Angeles'
+
+// Here I am defining the array of tasks  that will be used
+const tasks  = [
+  'Meeting',
+  'Phone Call',
+  'Lunch',
 ]
 
 
@@ -25,12 +25,12 @@ class SelectFieldComponent extends Component{
 
 
   componentDidMount() {
-    fetch(cities , {
+    fetch(tasks , {
       method:'GET'
     })
     .then((results) => {
-      results.json().then((cities_data) => {
-        this.setState({cities : cities_data});
+      results.json().then((tasks_data) => {
+        this.setState({tasks : tasks_data});
       });
     })
     .catch((err) => {
@@ -45,6 +45,8 @@ class SelectFieldComponent extends Component{
     });
   }
 
+
+
 // here the handle close function is defined
   handleClose = () => {
     this.setState({open: false});
@@ -54,18 +56,18 @@ class SelectFieldComponent extends Component{
   handleChange = (event, index, values) => this.setState({values});
 
 
-  // here the menuItems for the SelectField are passed the cities
+  // here the menuItems for the SelectField are passed the tasks
 
   menuItems(values) {
   // the map function creates a new array with the results of calling a function on every element in the array
-    return cities .map((city) => (
+    return tasks .map((task) => (
         <MenuItem
-          key={city}
+          key={task}
           insetChildren={true}
           label={this.prop}
-          checked={values && values.indexOf(city) > -1}
-          value={city}
-          primaryText={city}
+          checked={values && values.indexOf(task) > -1}
+          value={task}
+          primaryText={task}
           onClick={this.handleOpen}
         />
         )
@@ -89,13 +91,19 @@ class SelectFieldComponent extends Component{
 
         <SelectField
           multiple={false}
-          hintText="Select a city"
+          hintText="Task"
           value={values}
           onChange={this.handleChange}
         >
           {this.menuItems(values)}
 
         </SelectField>
+
+        <TimePicker
+          hintText="Time"
+          autoOk={true}
+        />
+
 
         <Dialog
           actions={actions}

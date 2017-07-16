@@ -11,6 +11,9 @@ const App = () => (
   <MuiThemeProvider>
     <div>
       <SelectFieldComponent />
+      <SelectFieldComponent />
+      <SelectFieldComponent />
+      <SelectFieldComponent />
     </div>
   </MuiThemeProvider>
 );
