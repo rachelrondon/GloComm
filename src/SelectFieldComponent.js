@@ -5,8 +5,9 @@ import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import TimePicker from 'material-ui/TimePicker';
-
+import './App.css';
 
 // Here I am defining the array of tasks  that will be used
 const tasks  = [
@@ -88,34 +89,40 @@ class SelectFieldComponent extends Component{
 
     return(
       <div>
+          <Card
+            style={{
+              width: '300px',
+              height: '300px',
+              paddingTop: '80px',
+              paddingLeft: '20px'
+            }}>
+            <SelectField
+              multiple={false}
+              hintText="Task"
+              value={values}
+              onChange={this.handleChange}
+              className="time-picker"
+            >
+              {this.menuItems(values)}
 
-        <SelectField
-          multiple={false}
-          hintText="Task"
-          value={values}
-          onChange={this.handleChange}
-        >
-          {this.menuItems(values)}
+            </SelectField>
 
-        </SelectField>
+              <TimePicker
+                hintText="Time"
+                autoOk={true}
+                className="time-picker"
+              />
 
-        <TimePicker
-          hintText="Time"
-          autoOk={true}
-        />
-
-
-        <Dialog
-          actions={actions}
-          modal={true}
-          title={`${values}!`}
-          open={this.state.open}
-          onRequestClose={this.handleClose}
-          >
-        </Dialog>
-
-
-      </div>
+            <Dialog
+              actions={actions}
+              modal={true}
+              title={`${values}!`}
+              open={this.state.open}
+              onRequestClose={this.handleClose}
+              >
+            </Dialog>
+          </Card>
+        </div>
         );
       }
     }

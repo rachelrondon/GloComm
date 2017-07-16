@@ -17,6 +17,46 @@
   font-size: large;
 }
 
+#col-one {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 65px;
+  margin-top: 50px;
+}
+
+#col-two {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 65px;
+  margin-top: 50px;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  background-color:#00BCD4;
+  height: 75px;
+}
+
+.navTitle {
+  display: flex;
+  padding: 5px;
+  margin-left: 20px;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+#greeting-message {
+  font-size: 14px;
+  color:#ffffff;
+}
+
+body {
+  background-color:#eeeeee;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
