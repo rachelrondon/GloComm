@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import FontButtonComponent from './FontButtonComponent';
 
 class Navigation extends Component {
   state = {

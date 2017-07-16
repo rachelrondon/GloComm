@@ -1,8 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import DrawerComponent from './DrawerComponent';
 import SelectFieldComponent from './SelectFieldComponent';
-import BottomNavigationComponent from './BottomNavigationComponent';
 import Navigation from './Navigation';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
@@ -10,39 +8,41 @@ import './App.css';
 
 injectTapEventPlugin();
 
+class App extends Component{
 
-
-const App = () => (
-
-  <MuiThemeProvider>
-    <div>
-      <Navigation />
-      <div id="col-one">
-        <div className="select-field-component">
-          <SelectFieldComponent />
+  render() {
+    return(
+      <MuiThemeProvider>
+      <div>
+        <Navigation />
+        <div className="col-select">
+          <div className="select-field-component">
+            <SelectFieldComponent />
+          </div>
+          <div className="select-field-component">
+            <SelectFieldComponent />
+          </div>
         </div>
-        <div className="select-field-component">
-          <SelectFieldComponent />
+        <div className="col-select">
+          <div className="select-field-component">
+            <SelectFieldComponent />
+          </div>
+          <div className="select-field-component">
+            <SelectFieldComponent />
+          </div>
+        </div>
+        <div className="col-select">
+          <div className="select-field-component">
+            <SelectFieldComponent />
+          </div>
+          <div className="select-field-component">
+            <SelectFieldComponent />
+          </div>
         </div>
       </div>
-      <div id="col-two">
-        <div className="select-field-component">
-          <SelectFieldComponent />
-        </div>
-        <div className="select-field-component">
-          <SelectFieldComponent />
-        </div>
-      </div>
-      <div id="col-three">
-        <div className="select-field-component">
-          <SelectFieldComponent />
-        </div>
-        <div className="select-field-component">
-          <SelectFieldComponent />
-        </div>
-      </div>
-    </div>
-  </MuiThemeProvider>
-);
+    </MuiThemeProvider>
+    )
+  }
+}
 
 export default App;
