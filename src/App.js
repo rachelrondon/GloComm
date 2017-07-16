@@ -10,17 +10,36 @@ import './App.css';
 
 injectTapEventPlugin();
 
+
+
 const App = () => (
+
   <MuiThemeProvider>
     <div>
       <Navigation />
       <div id="col-one">
-        <SelectFieldComponent />
-        <SelectFieldComponent />
+        <div className="select-field-component">
+          <SelectFieldComponent />
+        </div>
+        <div className="select-field-component">
+          <SelectFieldComponent />
+        </div>
       </div>
       <div id="col-two">
-        <SelectFieldComponent />
-        <SelectFieldComponent />
+        <div className="select-field-component">
+          <SelectFieldComponent />
+        </div>
+        <div className="select-field-component">
+          <SelectFieldComponent />
+        </div>
+      </div>
+      <div id="col-three">
+        <div className="select-field-component">
+          <SelectFieldComponent />
+        </div>
+        <div className="select-field-component">
+          <SelectFieldComponent />
+        </div>
       </div>
     </div>
   </MuiThemeProvider>

@@ -24,7 +24,6 @@ class SelectFieldComponent extends Component{
     open: false,
   };
 
-
   componentDidMount() {
     fetch(tasks , {
       method:'GET'

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import FontIconComponent from './FontIconComponent';
-
-
+import FontButtonComponent from './FontButtonComponent';
 
 class Navigation extends Component {
   state = {
@@ -9,12 +7,11 @@ class Navigation extends Component {
     name: 'RACHEL'
   }
 
-
   render() {
     return(
         <nav>
-          <div className="navTitle">
-            <h1 id="greeting-message">{this.state.name}'S {this.state.logo}</h1>
+          <div className="nav-title">
+            <h1 id="greeting-message">{this.state.logo}</h1>
           </div>
         </nav>
     )

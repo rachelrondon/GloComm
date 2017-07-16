@@ -33,23 +33,33 @@
   margin-top: 50px;
 }
 
+#col-three {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 65px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+
 nav {
   display: flex;
   width: 100%;
   background-color:#00BCD4;
-  height: 75px;
+  height: 80px;
 }
 
-.navTitle {
+.nav-title {
   display: flex;
-  padding: 5px;
-  margin-left: 20px;
   font-size: 12px;
-  margin-top: 10px;
+  margin-top: 12px;
+  margin-left: 20px;
 }
 
 #greeting-message {
-  font-size: 14px;
+  font-size: 20px;
   color:#ffffff;
 }
 
@@ -61,3 +71,476 @@ body {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+/* --------------- Start of Media Queries ---------------- */
+
+/* at 850px the padding left is 250 */
+@media (max-width: 850px) {
+    #col-one {
+      margin-top: 0px;
+      padding-top: 65px;
+      padding-left: 250px;
+      flex-direction: column;
+    }
+    #col-two {
+      margin-top: 0px;
+      padding-top: 65px;
+      padding: 0px;
+      padding-left: 250px;
+      flex-direction: column;
+    }
+    #col-three {
+      margin-top: 0px;
+      padding-top: 65px;
+      padding: 0px;
+      padding-left: 250px;
+      flex-direction: column;
+    }
+    .select-field-component {
+      padding-top: 65px;
+    }
+  }
+
+  /* at 800px the padding left is 225 */
+  @media (max-width: 800px) {
+      #col-one {
+        margin-top: 0px;
+        padding-top: 65px;
+        padding-left: 225px;
+        flex-direction: column;
+      }
+      #col-two {
+        margin-top: 0px;
+        padding-top: 65px;
+        padding: 0px;
+        padding-left: 225px;
+        flex-direction: column;
+      }
+      #col-three {
+        margin-top: 0px;
+        padding-top: 65px;
+        padding: 0px;
+        padding-left: 225px;
+        flex-direction: column;
+      }
+      .select-field-component {
+        padding-top: 65px;
+      }
+    }
+    /* at 750px the padding left is 200 */
+    @media (max-width: 800px) {
+        #col-one {
+          margin-top: 0px;
+          padding-top: 65px;
+          padding-left: 200px;
+          flex-direction: column;
+        }
+        #col-two {
+          margin-top: 0px;
+          padding-top: 65px;
+          padding: 0px;
+          padding-left: 200px;
+          flex-direction: column;
+        }
+        #col-three {
+          margin-top: 0px;
+          padding-top: 65px;
+          padding: 0px;
+          padding-left: 200px;
+          flex-direction: column;
+        }
+        .select-field-component {
+          padding-top: 65px;
+        }
+      }
+
+/* at 700px the padding left is 175 */
+  @media (max-width: 700px) {
+      #col-one {
+        margin-top: 0px;
+        padding-top: 65px;
+        padding-left: 175px;
+        flex-direction: column;
+      }
+      #col-two {
+        margin-top: 0px;
+        padding-top: 65px;
+        padding: 0px;
+        padding-left: 175px;
+        flex-direction: column;
+      }
+      #col-three {
+        margin-top: 0px;
+        padding-top: 65px;
+        padding: 0px;
+        padding-left: 175px;
+        flex-direction: column;
+      }
+      .select-field-component {
+        padding-top: 65px;
+      }
+    }
+
+    /* at 650px the padding left is 150 */
+      @media (max-width: 650px) {
+          #col-one {
+            margin-top: 0px;
+            padding-top: 65px;
+            padding-left: 150px;
+            flex-direction: column;
+          }
+          #col-two {
+            margin-top: 0px;
+            padding-top: 65px;
+            padding: 0px;
+            padding-left: 150px;
+            flex-direction: column;
+          }
+          #col-three {
+            margin-top: 0px;
+            padding-top: 65px;
+            padding: 0px;
+            padding-left: 150px;
+            flex-direction: column;
+          }
+          .select-field-component {
+            padding-top: 65px;
+          }
+        }
+
+/* at 600px the padding left is 125 */
+    @media (max-width: 600px) {
+        #col-one {
+          margin-top: 0px;
+          padding-top: 65px;
+          padding-left: 125px;
+          flex-direction: column;
+        }
+        #col-two {
+          margin-top: 0px;
+          padding-top: 65px;
+          padding: 0px;
+          padding-left: 125px;
+          flex-direction: column;
+        }
+        #col-three {
+          margin-top: 0px;
+          padding-top: 65px;
+          padding: 0px;
+          padding-left: 125px;
+          flex-direction: column;
+        }
+        .select-field-component {
+          padding-top: 65px;
+        }
+      }
+
+/* at 550px the padding left is 100 */
+  @media (max-width: 500px) {
+      #col-one {
+        margin-top: 0px;
+        padding-top: 65px;
+        padding-left: 100px;
+        flex-direction: column;
+      }
+      #col-two {
+        margin-top: 0px;
+        padding-top: 65px;
+        padding: 0px;
+        padding-left: 100px;
+        flex-direction: column;
+      }
+      #col-three {
+        margin-top: 0px;
+        padding-top: 65px;
+        padding: 0px;
+        padding-left: 100px;
+        flex-direction: column;
+      }
+      .select-field-component {
+        padding-top: 65px;
+      }
+    }
+
+/* at 500px the padding left is 75 */
+      @media (max-width: 500px) {
+          #col-one {
+            margin-top: 0px;
+            padding-top: 65px;
+            padding-left: 75px;
+            flex-direction: column;
+          }
+          #col-two {
+            margin-top: 0px;
+            padding-top: 65px;
+            padding: 0px;
+            padding-left: 75px;
+            flex-direction: column;
+          }
+          #col-three {
+            margin-top: 0px;
+            padding-top: 65px;
+            padding: 0px;
+            padding-left: 75px;
+            flex-direction: column;
+          }
+          .select-field-component {
+            padding-top: 65px;
+          }
+        }
+  /* at 450px the padding left is 50 */
+        @media (max-width: 450px) {
+            #col-one {
+              margin-top: 0px;
+              padding-top: 65px;
+              padding-left: 50px;
+              flex-direction: column;
+            }
+            #col-two {
+              margin-top: 0px;
+              padding-top: 65px;
+              padding: 0px;
+              padding-left: 50px;
+              flex-direction: column;
+            }
+            #col-three {
+              margin-top: 0px;
+              padding-top: 65px;
+              padding: 0px;
+              padding-left: 50px;
+              flex-direction: column;
+            }
+            .select-field-component {
+              padding-top: 65px;
+            }
+          }
+
+/* at 400px the padding left is 25 */
+          @media (max-width: 400px) {
+              #col-one {
+                margin-top: 0px;
+                padding-top: 65px;
+                padding-left: 10px;
+                flex-direction: column;
+              }
+              #col-two {
+                margin-top: 0px;
+                padding-top: 65px;
+                padding: 0px;
+                padding-left: 10px;
+                flex-direction: column;
+              }
+              #col-three {
+                margin-top: 0px;
+                padding-top: 65px;
+                padding: 0px;
+                padding-left: 10px;
+                flex-direction: column;
+              }
+              .select-field-component {
+                padding-top: 65px;
+              }
+            }
+
+
+/* iPhone 4 and 4S */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #col-one {
+      margin-top: 0px;
+      padding-top: 65px;
+      padding: 0px;
+      padding-left: 65px;
+      flex-direction: column;
+    }
+    #col-two {
+      margin-top: 0px;
+      padding-top: 65px;
+      padding: 0px;
+      padding-left: 65px;
+      flex-direction: column;
+    }
+    #col-three {
+      margin-top: 0px;
+      padding-top: 65px;
+      padding: 0px;
+      padding-left: 65px;
+      flex-direction: column;
+    }
+    .select-field-component {
+      padding-top: 65px;
+    }
+  }
+
+/* iPhone 5 and 5S */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #col-one {
+      margin-top: 0px;
+      padding-top: 65px;
+      padding: 0px;
+      padding-left: 65px;
+      flex-direction: column;
+    }
+    #col-two {
+      margin-top: 0px;
+      padding-top: 65px;
+      padding: 0px;
+      padding-left: 65px;
+      flex-direction: column;
+    }
+    #col-three {
+      margin-top: 0px;
+      padding-top: 65px;
+      padding: 0px;
+      padding-left: 65px;
+      flex-direction: column;
+    }
+    .select-field-component {
+      padding-top: 65px;
+    }
+  }
+
+/* iPhone 6 */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #col-one {
+      margin-top: 0px;
+      padding-top: 65px;
+      padding: 0px;
+      padding-left: 65px;
+      flex-direction: column;
+    }
+    #col-two {
+      margin-top: 0px;
+      padding-top: 65px;
+      padding: 0px;
+      padding-left: 65px;
+      flex-direction: column;
+    }
+    #col-three {
+      margin-top: 0px;
+      padding-top: 65px;
+      padding: 0px;
+      padding-left: 65px;
+      flex-direction: column;
+    }
+    .select-field-component {
+      padding-top: 65px;
+    }
+  }
+
+/* iPhone 6+ */
+@media only screen
+  and (min-device-wdith: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+    #col-one {
+      margin-top: 0px;
+      padding-top: 65px;
+      padding: 0px;
+      padding-left: 65px;
+      flex-direction: column;
+    }
+    #col-two {
+      margin-top: 0px;
+      padding-top: 65px;
+      padding: 0px;
+      padding-left: 65px;
+      flex-direction: column;
+    }
+    #col-three {
+      margin-top: 0px;
+      padding-top: 65px;
+      padding: 0px;
+      padding-left: 65px;
+      flex-direction: column;
+    }
+    .select-field-component {
+      padding-top: 65px;
+    }
+  }
+
+/* iPad mini */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    #col-one {
+      margin-top: 0px;
+      padding-top: 65px;
+      padding: 0px;
+      padding-left: 65px;
+      flex-direction: column;
+    }
+    #col-two {
+      margin-top: 0px;
+      padding-top: 65px;
+      padding: 0px;
+      padding-left: 65px;
+      flex-direction: column;
+    }
+    #col-three {
+      margin-top: 0px;
+      padding-top: 65px;
+      padding: 0px;
+      padding-left: 65px;
+      flex-direction: column;
+    }
+    .select-field-component {
+      padding-top: 65px;
+    }
+  }
+
+/* iPad 1 and 2 */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (-webkit-min-device-pixel-ratio: 1) {
+      #col-one {
+        flex-direction: column;
+      }
+      #col-two {
+        flex-direction: column;
+      }
+      #col-three {
+        flex-direction: column;
+      }
+    }
+
+/* iPad 3 and 4 */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+      #col-one {
+        margin-top: 0px;
+        padding-top: 65px;
+        padding: 0px;
+        padding-left: 65px;
+        flex-direction: column;
+      }
+      #col-two {
+        margin-top: 0px;
+        padding-top: 65px;
+        padding: 0px;
+        padding-left: 65px;
+        flex-direction: column;
+      }
+      #col-three {
+        margin-top: 0px;
+        padding-top: 65px;
+        padding: 0px;
+        padding-left: 65px;
+        flex-direction: column;
+      }
+      .select-field-component {
+        padding-top: 65px;
+      }
+    }
