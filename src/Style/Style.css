@@ -1,50 +1,18 @@
-.App {
-  text-align: center;
+body {
+  background-color:#eeeeee;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color:#eeeeee;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  height: 150px;
-  padding: 20px;
-  color: black;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-.col-select {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 65px;
-  margin-top: 50px;
-}
-
-#footer-msg {
-  padding-top: 20px;
-}
+/* Navigation Bar */
 nav {
   display: flex;
   width: 100%;
   background-color:#00BCD4;
   height: 80px;
 }
-
-footer {
-  background-color:#00BCD4;
-  margin: 0;
-  padding: 0;
-  color:#ffffff;
-  height: 100%;
-  width: 100%;
-  text-align: center;
-}
-
 
 .nav-title {
   display: flex;
@@ -58,26 +26,39 @@ footer {
   color:#ffffff;
 }
 
-body {
-  background-color:#eeeeee;
+/* Footer */
+footer {
+  background-color:#00BCD4;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  background-color:#eeeeee;
+  margin-top: 70px;
+  color:#ffffff;
+  height: 100%;
+  width: 100%;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+#footer-msg {
+  padding-top: 20px;
 }
 
-/* --------------- Start of Media Queries ---------------- */
+/* App.js */
+.col-select {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 65px;
+  margin-top: 50px;
+}
+
+/* --------------- Media Queries ---------------- */
 
 /* at 850px the padding left is 250 */
 @media (max-width: 850px) {
-    .select-col {
+    .col-select {
       margin-top: 0px;
-      padding-top: 65px;
+      padding: 0px;
+      /*padding-top: 65px;*/
       padding-left: 250px;
       flex-direction: column;
     }
@@ -88,9 +69,10 @@ body {
 
 /* at 800px the padding left is 225 */
 @media (max-width: 800px) {
-    .select-col {
+    .col-select {
       margin-top: 0px;
-      padding-top: 65px;
+      padding: 0px;
+      /*padding-top: 65px;*/
       padding-left: 225px;
       flex-direction: column;
     }
@@ -100,10 +82,11 @@ body {
   }
 
 /* at 750px the padding left is 200 */
-@media (max-width: 800px) {
-    .select-col {
+@media (max-width: 750px) {
+    .col-select {
       margin-top: 0px;
-      padding-top: 65px;
+      padding: 0px;
+      /*padding-top: 65px;*/
       padding-left: 200px;
       flex-direction: column;
     }
@@ -114,9 +97,10 @@ body {
 
 /* at 700px the padding left is 175 */
 @media (max-width: 700px) {
-    .select-col {
+    .col-select {
       margin-top: 0px;
-      padding-top: 65px;
+      padding: 0px;
+      /*padding-top: 65px;*/
       padding-left: 175px;
       flex-direction: column;
     }
@@ -127,9 +111,10 @@ body {
 
 /* at 650px the padding left is 150 */
 @media (max-width: 650px) {
-    .select-col {
+    .col-select {
       margin-top: 0px;
-      padding-top: 65px;
+      padding: 0px;
+      /*padding-top: 65px;*/
       padding-left: 150px;
       flex-direction: column;
     }
@@ -140,9 +125,10 @@ body {
 
 /* at 600px the padding left is 125 */
 @media (max-width: 600px) {
-    .select-col {
+    .col-select {
       margin-top: 0px;
-      padding-top: 65px;
+      padding: 0px;
+      /*padding-top: 65px;*/
       padding-left: 125px;
       flex-direction: column;
     }
@@ -152,10 +138,11 @@ body {
   }
 
 /* at 550px the padding left is 100 */
-@media (max-width: 500px) {
-    .select-col {
+@media (max-width: 550px) {
+    .col-select {
       margin-top: 0px;
-      padding-top: 65px;
+      padding: 0px;
+      /*padding-top: 65px;*/
       padding-left: 100px;
       flex-direction: column;
     }
@@ -166,9 +153,10 @@ body {
 
 /* at 500px the padding left is 75 */
 @media (max-width: 500px) {
-    .select-col {
+    .col-select {
       margin-top: 0px;
-      padding-top: 65px;
+      padding: 0px;
+      /*padding-top: 65px;*/
       padding-left: 75px;
       flex-direction: column;
     }
@@ -179,9 +167,10 @@ body {
 
 /* at 450px the padding left is 50 */
 @media (max-width: 450px) {
-    .select-col {
+    .col-select {
       margin-top: 0px;
-      padding-top: 65px;
+      padding: 0px;
+      /*padding-top: 65px;*/
       padding-left: 50px;
       flex-direction: column;
     }
@@ -190,11 +179,12 @@ body {
     }
   }
 
-/* at 400px the padding left is 25 */
+/* at 400px the padding left is 10 */
 @media (max-width: 400px) {
-    .select-col {
+    .col-select {
       margin-top: 0px;
-      padding-top: 65px;
+      padding: 0px;
+      /*padding-top: 65px;*/
       padding-left: 10px;
       flex-direction: column;
     }
@@ -208,7 +198,7 @@ body {
   and (min-device-width: 320px)
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
-    .select-col {
+    .col-select {
       margin-top: 0px;
       padding-top: 65px;
       padding: 0px;
@@ -225,7 +215,7 @@ body {
   and (min-device-width: 320px)
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
-    .select-col {
+    .col-select {
       margin-top: 0px;
       padding-top: 65px;
       padding: 0px;
@@ -242,7 +232,7 @@ body {
   and (min-device-width: 375px)
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
-    .select-col {
+    .col-select {
       margin-top: 0px;
       padding-top: 65px;
       padding: 0px;
@@ -259,7 +249,7 @@ body {
   and (min-device-wdith: 414px)
   and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 3) {
-    .select-col {
+    .col-select {
       margin-top: 0px;
       padding-top: 65px;
       padding: 0px;
@@ -276,7 +266,7 @@ body {
   and (min-device-width: 768px)
   and (max-device-width: 1024px)
   and (-webkit-min-device-pixel-ratio: 1) {
-    .select-col {
+    .col-select {
       margin-top: 0px;
       padding-top: 65px;
       padding: 0px;
@@ -293,7 +283,7 @@ body {
   and (min-device-width: 768px)
   and (max-device-width: 1024px)
   and (-webkit-min-device-pixel-ratio: 1) {
-    .select-col {
+    .col-select {
       margin-top: 0px;
       padding-top: 65px;
       padding: 0px;
@@ -310,7 +300,7 @@ body {
   and (min-device-width: 768px)
   and (max-device-width: 1024px)
   and (-webkit-min-device-pixel-ratio: 2) {
-    .select-col {
+    .col-select {
       margin-top: 0px;
       padding-top: 65px;
       padding: 0px;

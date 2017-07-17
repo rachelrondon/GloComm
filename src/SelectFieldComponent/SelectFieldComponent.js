@@ -7,7 +7,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import TimePicker from 'material-ui/TimePicker';
-import './App.css';
+import '../Style/Style.css';
 
 const tasks  = [
   'meeting',
@@ -59,7 +59,7 @@ class SelectFieldComponent extends Component{
 
   menuItems(values) {
   // the map function creates a new array with the results of calling a function on every element in the array
-    return tasks .map((task) => (
+    return tasks.map((task) => (
         <MenuItem
           key={task}
           insetChildren={true}
@@ -99,7 +99,6 @@ class SelectFieldComponent extends Component{
               hintText="Task"
               value={values}
               onChange={this.handleChange}
-              className="time-picker"
             >
               {this.menuItems(values)}
 
@@ -108,7 +107,6 @@ class SelectFieldComponent extends Component{
               <TimePicker
                 hintText="Time"
                 autoOk={true}
-                className="time-picker"
               />
 
             <Dialog

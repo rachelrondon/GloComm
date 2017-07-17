@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import SelectFieldComponent from './SelectFieldComponent';
+import SelectFieldComponent from './SelectFieldComponent/SelectFieldComponent';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-
-import './App.css';
+import './Style/Style.css';
 
 injectTapEventPlugin();
 
