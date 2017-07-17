@@ -12,8 +12,8 @@ class Navigation extends Component {
             <h1 id="logo">{this.state.logo}</h1>
           </div>
         </nav>
-    )
+      )
+    }
   }
-}
 
 export default Navigation;

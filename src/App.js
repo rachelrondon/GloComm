@@ -8,6 +8,7 @@ import './Style/Style.css';
 
 injectTapEventPlugin();
 
+// App.Js will return the navigation bar, footer, and four columns containing two SelectFieldComponents each 
 class App extends Component{
 
   render() {

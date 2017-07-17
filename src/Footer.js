@@ -10,8 +10,8 @@ class Footer extends Component {
         <footer>
           <h4 id="footer-msg">Thank you for using {this.state.logo}!</h4>
         </footer>
-    )
-  }
-}
+      )
+    }
+  } 
 
 export default Footer;
