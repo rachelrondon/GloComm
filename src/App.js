@@ -11,12 +11,19 @@ injectTapEventPlugin();
 // App.Js will return the navigation bar, footer, and four columns containing two SelectFieldComponents each
 class App extends Component{
 
+// This is what renders when the app is loaded.
+// I am using the default lightBaseTheme
+// To use this theme, the only thing that needs to be done is wrap everything with the <MuiThemeProvider>
+// I wanted to create four rows with two columns
+// Thus, I am rendering the SelectFieldComponent 8 times
+// I have created a select-field-component class to add attributes to each specific card
+// I have also made a row-select class to add attributes to each of the rows
   render() {
     return(
       <MuiThemeProvider>
       <div>
         <Navigation />
-        <div className="col-select">
+        <div className="row-select">
           <div className="select-field-component">
             <SelectFieldComponent />
           </div>
@@ -24,7 +31,7 @@ class App extends Component{
             <SelectFieldComponent />
           </div>
         </div>
-        <div className="col-select">
+        <div className="row-select">
           <div className="select-field-component">
             <SelectFieldComponent />
           </div>
@@ -32,7 +39,7 @@ class App extends Component{
             <SelectFieldComponent />
           </div>
         </div>
-        <div className="col-select">
+        <div className="row-select">
           <div className="select-field-component">
             <SelectFieldComponent />
           </div>
@@ -40,7 +47,7 @@ class App extends Component{
             <SelectFieldComponent />
           </div>
         </div>
-        <div className="col-select">
+        <div className="row-select">
           <div className="select-field-component">
             <SelectFieldComponent />
           </div>

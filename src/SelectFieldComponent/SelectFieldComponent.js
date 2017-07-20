@@ -38,19 +38,23 @@ componentDidMount() {
   })
 }
 
+// handleOpen is in regards to the dialog componet
 handleOpen = () => {
   this.setState({
     open: true,
   });
 }
 
+// handleClose is in regards to the dialog component
 handleClose = () => {
   this.setState({open: false});
 };
 
+// on change the value will be updated
 handleChange = (event, index, values) => this.setState({values});
 
 
+// For the menuItems I used the multiple selection example
   menuItems(values) {
     return tasks.map((task) => (
         <MenuItem
@@ -61,6 +65,7 @@ handleChange = (event, index, values) => this.setState({values});
           value={task}
           primaryText={task}
           onClick={this.handleOpen}
+// onClick of the menu item, the dialog box opens
         />
         )
       );
@@ -68,8 +73,12 @@ handleChange = (event, index, values) => this.setState({values});
 
   render() {
 
-    const {values} = this.state;
+  // here the values are defined as this.state
+  // the values are equal to the current representation of state
+  const {values} = this.state;
 
+  // Handle close is in regards to the dialog component. After the dialog is displayed, then the use can click close for the dialog button to be removed
+  // The FlatButton is in regards to the dialog component
     const actions = [
       <FlatButton
         label="Close"
@@ -81,6 +90,9 @@ handleChange = (event, index, values) => this.setState({values});
     return(
       <div>
           <Card
+    // Here I am using the Card component to display all of the information
+    // I have styled the card component here instead of in the style.css file
+    // If I wanted to style the component within the style.css file I would need to add a className
             style={{
               width: '300px',
               height: '300px',
@@ -88,6 +100,8 @@ handleChange = (event, index, values) => this.setState({values});
               paddingLeft: '20px'
             }}>
             <SelectField
+    // If multiple is changed to "true", then the user will be able to select multiple properties
+    // when multiple is set to false, then the user is only able to select one property
               multiple={false}
               hintText="Task"
               value={values}
@@ -105,8 +119,10 @@ handleChange = (event, index, values) => this.setState({values});
             <Dialog
               actions={actions}
               modal={true}
+            // values have been defined above as this.state
               title={`Your ${values} has been added!`}
               open={this.state.open}
+            // the dialog box opens when the state changes to open
               onRequestClose={this.handleClose}
               >
             </Dialog>
