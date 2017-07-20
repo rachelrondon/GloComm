@@ -5,6 +5,7 @@ class Footer extends Component {
     logo: 'TIMETABLE',
   }
 
+// the logo was defined within the state and then passed below.
   render() {
     return(
         <footer>
@@ -12,6 +13,6 @@ class Footer extends Component {
         </footer>
       )
     }
-  } 
+  }
 
 export default Footer;

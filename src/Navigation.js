@@ -5,6 +5,7 @@ class Navigation extends Component {
     logo: 'TIMETABLE',
   }
 
+// the logo was defined within the state and then passed below
   render() {
     return(
         <nav>
